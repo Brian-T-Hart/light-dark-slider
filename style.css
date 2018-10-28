@@ -1,0 +1,125 @@
+html {
+	height: 100%;
+}
+  
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+  
+h1 {
+	text-align: center;
+	font-size: 72px;
+	color: #abcdef;
+	letter-spacing: 1.2px;
+}
+  
+.main-container.dark {
+	padding-top: 10%;
+	animation-name: go-dark;
+	animation-duration: 1s;
+	background-color: #000;
+	height: 100%;
+}
+  
+.main-container.light {
+	padding-top: 10%;
+	animation-name: go-light;
+	animation-duration: 1s;
+	background-color: #FFF;
+	height: 100%;
+}
+  
+.main-content {
+	animation-name: main;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+}
+  
+.open-animation {
+	animation-name: opening;
+	animation-duration: 2s;
+	animation-timing-function: linear;
+	background-color: #abcdef;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	width: 0;
+	position: fixed;
+	top: 40%;
+}
+
+.slider-container {
+	border: 10px solid #abc;
+	border-radius: 60px;
+	width: 250px;
+	height: 100px;
+	background-color: #abcdef;
+	margin: auto;
+}
+
+.slider-off {
+	animation-name: slide-left;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+	border: 5px solid #abc;
+	border-radius: 40px;
+	height: 70px;
+	position: relative;
+	left: 25px;
+	top: 10px;
+	width: 70px;
+	background-color: red;
+}
+  
+.slider-on {
+	animation-name: slide-right;
+	animation-duration: 0.8s;
+	animation-timing-function: linear;
+	border: 5px solid #abc;
+	border-radius: 40px;
+	height: 70px;
+	position: relative;
+	left: 140px;
+	top: 10px;
+	width: 70px;
+	background-color: yellow;
+}
+
+@keyframes go-dark {
+	0% {background-color: #FFF}
+	100% {background-color: #000}
+}
+  
+@keyframes go-light {
+	0% {background-color: #000}
+	100% {background-color: #FFF}
+}
+
+@keyframes main {
+	0% {opacity: 0}
+	50% {opacity: 0}
+	100% {opacity: 1}
+}
+  
+@keyframes opening {
+	0% {height: 10%; top: 40%; width: 0}
+	25% {height: 10%; top: 40%; width: 100%}
+	50% {width: 100%}
+	75% {height: 100%; top: 0; width: 100%; opacity: 1}
+	100% {height: 100%; top: 0; width: 100%; opacity: 0}
+}
+  
+@keyframes slide-left {
+	0% {background-color: yellow; left: 140px}
+	100% {background-color: red; left: 25px}
+}
+
+@keyframes slide-right {
+	0% {background-color: red; left: 25px}
+	100% {background-color: yellow; left: 140px}
+}
+  
+  
